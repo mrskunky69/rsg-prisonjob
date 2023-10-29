@@ -1,0 +1,113 @@
+['prison'] = {
+        label = 'prison guard',
+        defaultDuty = true,
+        offDutyPay = false,
+        grades = {
+            ['0'] = {
+                name = 'Trainee',
+                payment = 25
+            },
+            ['1'] = {
+                name = 'Marshall',
+                payment = 75
+            },
+			['2'] = {
+                name = 'inspector',
+                payment = 75
+            },
+			['3'] = {
+                name = 'deputy',
+                payment = 75
+            },
+			['4'] = {
+                name = 'boss',
+                isboss = true,
+                payment = 75
+            },
+        },
+    },
+	
+	---RADIAL MENU
+	
+	
+	["prison"] = {
+        {
+            id = 'handcuff',
+            title = 'Cuff',
+            icon = 'user-lock',
+            type = 'client',
+            event = 'police:client:CuffPlayer',
+            shouldClose = true
+        },{
+            id = 'checkstatus',
+            title = 'Check status',
+            icon = 'question',
+            type = 'client',
+            event = 'prison:client:CheckStatus',
+            shouldClose = true
+        },{
+            id = 'escort',
+            title = 'Escort',
+            icon = 'user-group',
+            type = 'client',
+            event = 'prison:client:EscortPlayer',
+            shouldClose = true
+        }, {
+            id = 'searchplayer',
+            title = 'Search',
+            icon = 'magnifying-glass',
+            type = 'client',
+            event = 'prison:client:SearchPlayer',
+            shouldClose = true
+        }, {
+            id = 'jailplayer',
+            title = 'Jail',
+            icon = 'user-lock',
+            type = 'client',
+            event = 'prison:client:JailPlayer',
+            shouldClose = true
+        },
+		{
+            id = 'duty',
+            title = 'Go on/off duty',
+            icon = 'exclamation',
+            type = 'client',
+            event = 'rsg-prisonjob:ToggleDuty',
+            shouldClose = true
+        },		
+    },
+	
+	
+	------ boss menu 
+	
+	
+	{name = 'Boss Menu', bossname = " PrisonBoss-Menu", coords = vector3(3397.07, -679.55, 49.48),	showblip = false},
+	
+	
+	
+	-----
+	in rsg-prison change this line in config
+	
+	enables peds to try escape but not too far 
+	
+	Config.PrisonZone =
+{
+    [1] =
+    {
+        name = "prison",
+        zones =
+        {
+            vector2(3120.59, -473.24),
+            vector2(3339.26, -499.49),
+            vector2(3424.64, -796.32),
+            vector2(3244.37, -811.97)
+            
+        },
+        minZ = 44.26696395874,
+        maxZ = 46.395713806152
+    }
+}
+
+
+	----- rsg clothes config cloakroom
+	vector3(3394.57, -678.95, 46.95),
